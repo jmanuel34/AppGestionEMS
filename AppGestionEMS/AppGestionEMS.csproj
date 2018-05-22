@@ -168,6 +168,8 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\CursoesController.cs" />
+    <Compile Include="Controllers\GrupoClasesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
@@ -177,8 +179,18 @@
     <Compile Include="Migrations\201805181427360_ModifyUsers.Designer.cs">
       <DependentUpon>201805181427360_ModifyUsers.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201805221647575_CreateCursos.cs" />
+    <Compile Include="Migrations\201805221647575_CreateCursos.Designer.cs">
+      <DependentUpon>201805221647575_CreateCursos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805221652266_CreateGrupoClases.cs" />
+    <Compile Include="Migrations\201805221652266_CreateGrupoClases.Designer.cs">
+      <DependentUpon>201805221652266_CreateGrupoClases.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Curso.cs" />
+    <Compile Include="Models\GrupoClase.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -239,6 +251,16 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Cursoes\Create.cshtml" />
+    <Content Include="Views\Cursoes\Delete.cshtml" />
+    <Content Include="Views\Cursoes\Details.cshtml" />
+    <Content Include="Views\Cursoes\Edit.cshtml" />
+    <Content Include="Views\Cursoes\Index.cshtml" />
+    <Content Include="Views\GrupoClases\Create.cshtml" />
+    <Content Include="Views\GrupoClases\Delete.cshtml" />
+    <Content Include="Views\GrupoClases\Details.cshtml" />
+    <Content Include="Views\GrupoClases\Edit.cshtml" />
+    <Content Include="Views\GrupoClases\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -254,6 +276,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201805181427360_ModifyUsers.resx">
       <DependentUpon>201805181427360_ModifyUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805221647575_CreateCursos.resx">
+      <DependentUpon>201805221647575_CreateCursos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805221652266_CreateGrupoClases.resx">
+      <DependentUpon>201805221652266_CreateGrupoClases.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
