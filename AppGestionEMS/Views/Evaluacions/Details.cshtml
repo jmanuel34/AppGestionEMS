@@ -1,0 +1,98 @@
+﻿@model AppGestionEMS.Models.Evaluacion
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Evaluacion</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.nota_Pr)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nota_Pr)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.nota_Ev)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nota_Ev)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.nota_P1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nota_P1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.nota_P2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nota_P2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.nota_P3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nota_P3)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.nota_P4)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nota_P4)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.nota_Final)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nota_Final)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.practica_Convalidada)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.practica_Convalidada)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.examen_Convalidado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.examen_Convalidado)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UsuarioId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UsuarioId)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
