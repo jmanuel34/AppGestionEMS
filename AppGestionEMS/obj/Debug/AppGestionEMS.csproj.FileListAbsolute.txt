@@ -453,3 +453,4 @@ C:\Users\avilis06VIRTUAL01\Documents\Visual Studio 2015\Projects\AppGestionEMS\A
 C:\Users\avilis06VIRTUAL01\Documents\Visual Studio 2015\Projects\AppGestionEMS\AppGestionEMS\obj\Debug\AppGestionEMS.dll
 C:\Users\avilis06VIRTUAL01\Documents\Visual Studio 2015\Projects\AppGestionEMS\AppGestionEMS\obj\Debug\AppGestionEMS.pdb
 C:\Users\avilis06VIRTUAL01\Documents\Visual Studio 2015\Projects\AppGestionEMS\AppGestionEMS\obj\Debug\AppGestionEMS.Migrations.CreateEvaluacion.resources
+C:\Users\avilis06VIRTUAL01\Documents\Visual Studio 2015\Projects\AppGestionEMS\AppGestionEMS\obj\Debug\AppGestionEMS.Migrations.CreateMatriculas.resources
