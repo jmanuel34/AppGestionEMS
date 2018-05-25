@@ -360,3 +360,7 @@ C:\Users\bl0036\Desktop\AppGestionEMS\AppGestionEMS\obj\Debug\AppGestionEMS.Migr
 C:\Users\bl0036\Desktop\AppGestionEMS\AppGestionEMS\obj\Debug\AppGestionEMS.csproj.GenerateResource.Cache
 C:\Users\bl0036\Desktop\AppGestionEMS\AppGestionEMS\obj\Debug\AppGestionEMS.dll
 C:\Users\bl0036\Desktop\AppGestionEMS\AppGestionEMS\obj\Debug\AppGestionEMS.pdb
+C:\Users\alumno\Documents\Visual Studio 2015\Projects\AppGestionEMS\AppGestionEMS\obj\Debug\AppGestionEMS.Migrations.CreateCursos.resources
+C:\Users\alumno\Documents\Visual Studio 2015\Projects\AppGestionEMS\AppGestionEMS\obj\Debug\AppGestionEMS.Migrations.CreateGrupoClases.resources
+C:\Users\alumno\Documents\Visual Studio 2015\Projects\AppGestionEMS\AppGestionEMS\obj\Debug\AppGestionEMS.Migrations.UpdateGrupoClase.resources
+C:\Users\alumno\Documents\Visual Studio 2015\Projects\AppGestionEMS\AppGestionEMS\obj\Debug\AppGestionEMS.Migrations.CreateMatricula.resources

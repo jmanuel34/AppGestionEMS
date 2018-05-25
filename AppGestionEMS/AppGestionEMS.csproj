@@ -173,6 +173,7 @@
     <Compile Include="Controllers\GrupoClasesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\MatriculasController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -188,6 +189,14 @@
     <Compile Include="Migrations\201805221652266_CreateGrupoClases.Designer.cs">
       <DependentUpon>201805221652266_CreateGrupoClases.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201805251515455_UpdateGrupoClase.cs" />
+    <Compile Include="Migrations\201805251515455_UpdateGrupoClase.Designer.cs">
+      <DependentUpon>201805251515455_UpdateGrupoClase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805251549454_CreateMatricula.cs" />
+    <Compile Include="Migrations\201805251549454_CreateMatricula.Designer.cs">
+      <DependentUpon>201805251549454_CreateMatricula.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\AsignacionDocente.cs" />
@@ -195,6 +204,7 @@
     <Compile Include="Models\GrupoClase.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\Matricula.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -258,16 +268,21 @@
     <Content Include="Views\Cursoes\Details.cshtml" />
     <Content Include="Views\Cursoes\Edit.cshtml" />
     <Content Include="Views\Cursoes\Index.cshtml" />
-    <Content Include="Views\GrupoClases\Create.cshtml" />
-    <Content Include="Views\GrupoClases\Delete.cshtml" />
-    <Content Include="Views\GrupoClases\Details.cshtml" />
-    <Content Include="Views\GrupoClases\Edit.cshtml" />
-    <Content Include="Views\GrupoClases\Index.cshtml" />
     <Content Include="Views\AsignacionDocentes\Create.cshtml" />
     <Content Include="Views\AsignacionDocentes\Delete.cshtml" />
     <Content Include="Views\AsignacionDocentes\Details.cshtml" />
     <Content Include="Views\AsignacionDocentes\Edit.cshtml" />
     <Content Include="Views\AsignacionDocentes\Index.cshtml" />
+    <Content Include="Views\GrupoClases\Create.cshtml" />
+    <Content Include="Views\GrupoClases\Delete.cshtml" />
+    <Content Include="Views\GrupoClases\Details.cshtml" />
+    <Content Include="Views\GrupoClases\Edit.cshtml" />
+    <Content Include="Views\GrupoClases\Index.cshtml" />
+    <Content Include="Views\Matriculas\Create.cshtml" />
+    <Content Include="Views\Matriculas\Delete.cshtml" />
+    <Content Include="Views\Matriculas\Details.cshtml" />
+    <Content Include="Views\Matriculas\Edit.cshtml" />
+    <Content Include="Views\Matriculas\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -289,6 +304,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201805221652266_CreateGrupoClases.resx">
       <DependentUpon>201805221652266_CreateGrupoClases.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805251515455_UpdateGrupoClase.resx">
+      <DependentUpon>201805251515455_UpdateGrupoClase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805251549454_CreateMatricula.resx">
+      <DependentUpon>201805251549454_CreateMatricula.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

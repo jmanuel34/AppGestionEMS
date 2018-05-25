@@ -8,5 +8,6 @@ namespace AppGestionEMS.Models
     public class GrupoClase
     {
         public int Id { get; set; }
+        public string denominacion { get; set; }
     }
 }
