@@ -15,6 +15,7 @@ namespace AppGestionEMS.Controllers
         private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: Matriculas
+        [Authorize(Roles ="administrador, profesor, alumno")]
         public ActionResult Index()
         {
             var matriculas = db.Matriculas.Include(m => m.Usuario);
@@ -22,6 +23,7 @@ namespace AppGestionEMS.Controllers
         }
 
         // GET: Matriculas/Details/5
+        [Authorize(Roles = "administrador, profesor")]
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -37,6 +39,7 @@ namespace AppGestionEMS.Controllers
         }
 
         // GET: Matriculas/Create
+        [Authorize(Roles = "administrador")]
         public ActionResult Create()
         {
             ViewBag.UsuarioId = new SelectList(db.Users, "Id", "Name");
@@ -48,6 +51,7 @@ namespace AppGestionEMS.Controllers
         // más información vea http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "administrador")]
         public ActionResult Create([Bind(Include = "Id,UsuarioId,GrupoId,CursoId")] Matricula matricula)
         {
             if (ModelState.IsValid)
@@ -60,8 +64,10 @@ namespace AppGestionEMS.Controllers
             ViewBag.UsuarioId = new SelectList(db.Users, "Id", "Name", matricula.UsuarioId);
             return View(matricula);
         }
+        [Authorize(Roles = "administrador, profesor")]
 
         // GET: Matriculas/Edit/5
+        [Authorize(Roles = "administrador, profesor")]
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -82,6 +88,7 @@ namespace AppGestionEMS.Controllers
         // más información vea http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "administrador")]
         public ActionResult Edit([Bind(Include = "Id,UsuarioId,GrupoId,CursoId")] Matricula matricula)
         {
             if (ModelState.IsValid)
@@ -94,7 +101,9 @@ namespace AppGestionEMS.Controllers
             return View(matricula);
         }
 
-        // GET: Matriculas/Delete/5
+        // GET: Matriculas/Delete/5 
+        [Authorize(Roles ="administrador")]
+
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -112,6 +121,7 @@ namespace AppGestionEMS.Controllers
         // POST: Matriculas/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+        [Authorize (Roles = "administrador")]
         public ActionResult DeleteConfirmed(int id)
         {
             Matricula matricula = db.Matriculas.Find(id);

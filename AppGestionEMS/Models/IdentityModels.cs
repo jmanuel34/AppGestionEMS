@@ -40,5 +40,6 @@ namespace AppGestionEMS.Models
 
         public System.Data.Entity.DbSet<AppGestionEMS.Models.Matricula> Matriculas { get; set; }
 
+        public System.Data.Entity.DbSet<AppGestionEMS.Models.Evaluacion> Evaluacions { get; set; }
     }
 }

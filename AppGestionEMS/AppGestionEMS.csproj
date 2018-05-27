@@ -170,6 +170,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AsignacionDocentesController.cs" />
     <Compile Include="Controllers\CursoesController.cs" />
+    <Compile Include="Controllers\EvaluacionsController.cs" />
     <Compile Include="Controllers\GrupoClasesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
@@ -197,10 +198,15 @@
     <Compile Include="Migrations\201805251549454_CreateMatricula.Designer.cs">
       <DependentUpon>201805251549454_CreateMatricula.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201805261141592_CreateEvaluacion.cs" />
+    <Compile Include="Migrations\201805261141592_CreateEvaluacion.Designer.cs">
+      <DependentUpon>201805261141592_CreateEvaluacion.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\AsignacionDocente.cs" />
     <Compile Include="Models\Curso.cs" />
+    <Compile Include="Models\Evaluacion.cs" />
     <Compile Include="Models\GrupoClase.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
@@ -211,10 +217,12 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="EMSIndex.gif" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Imagenes\EMS.gif" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
@@ -283,6 +291,12 @@
     <Content Include="Views\Matriculas\Details.cshtml" />
     <Content Include="Views\Matriculas\Edit.cshtml" />
     <Content Include="Views\Matriculas\Index.cshtml" />
+    <Content Include="Views\Evaluacions\Create.cshtml" />
+    <Content Include="Views\Evaluacions\Delete.cshtml" />
+    <Content Include="Views\Evaluacions\Details.cshtml" />
+    <Content Include="Views\Evaluacions\Edit.cshtml" />
+    <Content Include="Views\Evaluacions\Index.cshtml" />
+    <Content Include="Views\Home\Index - Copia.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -310,6 +324,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201805251549454_CreateMatricula.resx">
       <DependentUpon>201805251549454_CreateMatricula.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805261141592_CreateEvaluacion.resx">
+      <DependentUpon>201805261141592_CreateEvaluacion.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

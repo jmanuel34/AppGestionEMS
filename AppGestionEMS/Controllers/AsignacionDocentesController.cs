@@ -10,11 +10,13 @@ using AppGestionEMS.Models;
 
 namespace AppGestionEMS.Controllers
 {
+   
     public class AsignacionDocentesController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: AsignacionDocentes
+        [Authorize(Roles = "administrador, profesor")]
         public ActionResult Index()
         {
             var asignacionDocentes = db.AsignacionDocentes.Include(a => a.Curso).Include(a => a.Grupo);
@@ -22,6 +24,7 @@ namespace AppGestionEMS.Controllers
         }
 
         // GET: AsignacionDocentes/Details/5
+        [Authorize(Roles = "administrador, profesor")]
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -35,7 +38,7 @@ namespace AppGestionEMS.Controllers
             }
             return View(asignacionDocente);
         }
-
+        [Authorize(Roles = "administrador, profesor")]
         // GET: AsignacionDocentes/Create
         public ActionResult Create()
         {
@@ -49,6 +52,7 @@ namespace AppGestionEMS.Controllers
         // más información vea http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "administrador")]
         public ActionResult Create([Bind(Include = "Id,CursoId,GrupoId,UsuarioId")] AsignacionDocente asignacionDocente)
         {
             if (ModelState.IsValid)
@@ -64,6 +68,7 @@ namespace AppGestionEMS.Controllers
         }
 
         // GET: AsignacionDocentes/Edit/5
+        [Authorize(Roles = "administrador")]
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -85,6 +90,7 @@ namespace AppGestionEMS.Controllers
         // más información vea http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "administrador")]
         public ActionResult Edit([Bind(Include = "Id,CursoId,GrupoId,UsuarioId")] AsignacionDocente asignacionDocente)
         {
             if (ModelState.IsValid)
@@ -99,6 +105,7 @@ namespace AppGestionEMS.Controllers
         }
 
         // GET: AsignacionDocentes/Delete/5
+        [Authorize(Roles = "administrador")]
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -116,6 +123,7 @@ namespace AppGestionEMS.Controllers
         // POST: AsignacionDocentes/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "administrador")]
         public ActionResult DeleteConfirmed(int id)
         {
             AsignacionDocente asignacionDocente = db.AsignacionDocentes.Find(id);
