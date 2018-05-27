@@ -10,20 +10,19 @@ using AppGestionEMS.Models;
 
 namespace AppGestionEMS.Controllers
 {
-  
     public class GrupoClasesController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: GrupoClases
-
-    [Authorize (Roles = "administrador, profesor")]
+        [Authorize(Roles = "administrador, profesor")]
         public ActionResult Index()
         {
             return View(db.GrupoClases.ToList());
         }
 
         // GET: GrupoClases/Details/5
+
         [Authorize(Roles = "administrador, profesor")]
         public ActionResult Details(int? id)
         {
@@ -40,6 +39,7 @@ namespace AppGestionEMS.Controllers
         }
 
         // GET: GrupoClases/Create
+
         [Authorize(Roles = "administrador")]
         public ActionResult Create()
         {
@@ -51,8 +51,9 @@ namespace AppGestionEMS.Controllers
         // más información vea http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+
         [Authorize(Roles = "administrador")]
-        public ActionResult Create([Bind(Include = "Id,denominacion")] GrupoClase grupoClase)
+        public ActionResult Create([Bind(Include = "Id,denominacion,UsuarioId")] GrupoClase grupoClase)
         {
             if (ModelState.IsValid)
             {
@@ -65,7 +66,8 @@ namespace AppGestionEMS.Controllers
         }
 
         // GET: GrupoClases/Edit/5
-        [Authorize(Roles ="administrador")]
+
+        [Authorize(Roles = "administrador")]
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -85,8 +87,9 @@ namespace AppGestionEMS.Controllers
         // más información vea http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+
         [Authorize(Roles = "administrador")]
-        public ActionResult Edit([Bind(Include = "Id,denominacion")] GrupoClase grupoClase)
+        public ActionResult Edit([Bind(Include = "Id,denominacion,UsuarioId")] GrupoClase grupoClase)
         {
             if (ModelState.IsValid)
             {
@@ -98,6 +101,7 @@ namespace AppGestionEMS.Controllers
         }
 
         // GET: GrupoClases/Delete/5
+
         [Authorize(Roles = "administrador")]
         public ActionResult Delete(int? id)
         {
@@ -116,6 +120,7 @@ namespace AppGestionEMS.Controllers
         // POST: GrupoClases/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+
         [Authorize(Roles = "administrador")]
         public ActionResult DeleteConfirmed(int id)
         {

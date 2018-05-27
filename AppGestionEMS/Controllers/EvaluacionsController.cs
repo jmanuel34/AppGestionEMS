@@ -10,7 +10,6 @@ using AppGestionEMS.Models;
 
 namespace AppGestionEMS.Controllers
 {
-  
     public class EvaluacionsController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
@@ -23,7 +22,7 @@ namespace AppGestionEMS.Controllers
         }
 
         // GET: Evaluacions/Details/5
-        [Authorize(Roles = "administrator, profesor, alumno")]
+        [Authorize(Roles = "administrador, profesor, alumno")]
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -39,7 +38,7 @@ namespace AppGestionEMS.Controllers
         }
 
         // GET: Evaluacions/Create
-        [Authorize(Roles = "administrator")]
+        [Authorize(Roles = "administrador, profesor")]
         public ActionResult Create()
         {
             return View();
@@ -50,8 +49,8 @@ namespace AppGestionEMS.Controllers
         // más información vea http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        [Authorize(Roles = "administrator")]
-        public ActionResult Create([Bind(Include = "Id,nota_Pr,nota_Ev,nota_P1,nota_P2,nota_P3,nota_P4,nota_Final,practica_Convalidada,examen_Convalidado")] Evaluacion evaluacion)
+        [Authorize(Roles = "administrador, profesor")]
+        public ActionResult Create([Bind(Include = "Id,UsuarioId,nota_Pr,nota_Ev,nota_P1,nota_P2,nota_P3,nota_P4,nota_Final,practica_Convalidada,examen_Convalidado")] Evaluacion evaluacion)
         {
             if (ModelState.IsValid)
             {
@@ -64,7 +63,7 @@ namespace AppGestionEMS.Controllers
         }
 
         // GET: Evaluacions/Edit/5
-        [Authorize(Roles = "administrator, profesor")]
+        [Authorize(Roles = "administrador, profesor")]
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -84,8 +83,8 @@ namespace AppGestionEMS.Controllers
         // más información vea http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        [Authorize(Roles = "administrator, profesor")]
-        public ActionResult Edit([Bind(Include = "Id,nota_Pr,nota_Ev,nota_P1,nota_P2,nota_P3,nota_P4,nota_Final,practica_Convalidada,examen_Convalidado")] Evaluacion evaluacion)
+        [Authorize(Roles = "administrador, profesor")]
+        public ActionResult Edit([Bind(Include = "Id,UsuarioId,nota_Pr,nota_Ev,nota_P1,nota_P2,nota_P3,nota_P4,nota_Final,practica_Convalidada,examen_Convalidado")] Evaluacion evaluacion)
         {
             if (ModelState.IsValid)
             {
@@ -97,7 +96,7 @@ namespace AppGestionEMS.Controllers
         }
 
         // GET: Evaluacions/Delete/5
-        [Authorize(Roles = "administrator")]
+        [Authorize(Roles = "administrador")]
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -113,9 +112,9 @@ namespace AppGestionEMS.Controllers
         }
 
         // POST: Evaluacions/Delete/5
-        [Authorize(Roles = "administrator")]
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "administrador")]
         public ActionResult DeleteConfirmed(int id)
         {
             Evaluacion evaluacion = db.Evaluacions.Find(id);

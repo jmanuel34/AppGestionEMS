@@ -458,3 +458,6 @@ C:\Users\Jm\Documents\Visual Studio 2015\Projects\AppGestionEMS\AppGestionEMS\ob
 C:\Users\Jm\Documents\Visual Studio 2015\Projects\AppGestionEMS\AppGestionEMS\obj\Debug\AppGestionEMS.dll
 C:\Users\Jm\Documents\Visual Studio 2015\Projects\AppGestionEMS\AppGestionEMS\obj\Debug\AppGestionEMS.pdb
 C:\Users\Jm\Documents\Visual Studio 2015\Projects\AppGestionEMS\AppGestionEMS\obj\Debug\AppGestionEMS.Migrations.CreateEvaluacion.resources
+C:\Users\Jm\Documents\Visual Studio 2015\Projects\AppGestionEMS\AppGestionEMS\obj\Debug\AppGestionEMS.Migrations.UpdateCrupoClaseProfesor.resources
+C:\Users\Jm\Documents\Visual Studio 2015\Projects\AppGestionEMS\AppGestionEMS\obj\Debug\AppGestionEMS.Migrations.UpdateCrupoEvaluacionAlumno.resources
+C:\Users\Jm\Documents\Visual Studio 2015\Projects\AppGestionEMS\AppGestionEMS\obj\Debug\AppGestionEMS.Migrations.UpdateGrupoEvaluacionAlumno.resources

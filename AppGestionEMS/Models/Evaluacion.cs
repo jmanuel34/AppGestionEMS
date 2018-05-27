@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
@@ -8,6 +9,11 @@ namespace AppGestionEMS.Models
     public class Evaluacion
     {
         public int Id { get; set; }
+
+        [Display(Name = "Alumno")]
+        public int UsuarioId { get; set; }
+        public virtual ApplicationUser Usuario { get; set; }
+
         public float nota_Pr { get; set; }
         public float nota_Ev { get; set; }
         public float nota_P1 { get; set; }
@@ -17,5 +23,6 @@ namespace AppGestionEMS.Models
         public float nota_Final { get; set; }
         public float practica_Convalidada { get; set; }
         public float examen_Convalidado { get; set; }
+
     }
 }

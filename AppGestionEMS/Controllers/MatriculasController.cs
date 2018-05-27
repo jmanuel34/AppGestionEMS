@@ -64,8 +64,7 @@ namespace AppGestionEMS.Controllers
             ViewBag.UsuarioId = new SelectList(db.Users, "Id", "Name", matricula.UsuarioId);
             return View(matricula);
         }
-        [Authorize(Roles = "administrador, profesor")]
-
+      
         // GET: Matriculas/Edit/5
         [Authorize(Roles = "administrador, profesor")]
         public ActionResult Edit(int? id)
@@ -88,7 +87,7 @@ namespace AppGestionEMS.Controllers
         // más información vea http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        [Authorize(Roles = "administrador")]
+        [Authorize(Roles = "administrador, profesor")]
         public ActionResult Edit([Bind(Include = "Id,UsuarioId,GrupoId,CursoId")] Matricula matricula)
         {
             if (ModelState.IsValid)

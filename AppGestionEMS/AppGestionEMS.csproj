@@ -202,6 +202,18 @@
     <Compile Include="Migrations\201805261141592_CreateEvaluacion.Designer.cs">
       <DependentUpon>201805261141592_CreateEvaluacion.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201805272049344_UpdateCrupoClaseProfesor.cs" />
+    <Compile Include="Migrations\201805272049344_UpdateCrupoClaseProfesor.Designer.cs">
+      <DependentUpon>201805272049344_UpdateCrupoClaseProfesor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805272111505_UpdateCrupoEvaluacionAlumno.cs" />
+    <Compile Include="Migrations\201805272111505_UpdateCrupoEvaluacionAlumno.Designer.cs">
+      <DependentUpon>201805272111505_UpdateCrupoEvaluacionAlumno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805272117297_UpdateGrupoEvaluacionAlumno.cs" />
+    <Compile Include="Migrations\201805272117297_UpdateGrupoEvaluacionAlumno.Designer.cs">
+      <DependentUpon>201805272117297_UpdateGrupoEvaluacionAlumno.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\AsignacionDocente.cs" />
@@ -327,6 +339,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201805261141592_CreateEvaluacion.resx">
       <DependentUpon>201805261141592_CreateEvaluacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805272049344_UpdateCrupoClaseProfesor.resx">
+      <DependentUpon>201805272049344_UpdateCrupoClaseProfesor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805272111505_UpdateCrupoEvaluacionAlumno.resx">
+      <DependentUpon>201805272111505_UpdateCrupoEvaluacionAlumno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805272117297_UpdateGrupoEvaluacionAlumno.resx">
+      <DependentUpon>201805272117297_UpdateGrupoEvaluacionAlumno.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
