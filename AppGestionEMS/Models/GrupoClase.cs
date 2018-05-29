@@ -12,7 +12,7 @@ namespace AppGestionEMS.Models
             public string denominacion { get; set; }
 
         [Display(Name = "Profesor")]
-        public int UsuarioId { get; set; }
+        public string UsuarioId { get; set; }
         public virtual ApplicationUser Usuario { get; set; }
 
     }

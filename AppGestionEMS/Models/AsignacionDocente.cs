@@ -11,15 +11,15 @@ namespace AppGestionEMS.Models
         public int Id { get; set; }
 
         [Display(Name = "Curso")]
-        public int CursoId { get; set; }
+        public string CursoId { get; set; }
         public virtual Curso Curso { get; set; }
 
         [Display(Name = "Grupo")]
-        public int GrupoId { get; set; }
+        public string GrupoId { get; set; }
         public virtual GrupoClase Grupo { get; set; }
 
         [Display(Name = "Profesor")]
-        public int UsuarioId { get; set; }
+        public string UsuarioId { get; set; }
         public virtual ApplicationUser Usuario { get; set; }
 
     }

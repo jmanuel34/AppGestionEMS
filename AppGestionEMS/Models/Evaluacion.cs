@@ -11,8 +11,12 @@ namespace AppGestionEMS.Models
         public int Id { get; set; }
 
         [Display(Name = "Alumno")]
-        public int UsuarioId { get; set; }
+        public string UsuarioId { get; set; }
         public virtual ApplicationUser Usuario { get; set; }
+
+        [Display(Name = "Curso")]
+        public string CursoId { get; set; }
+        public virtual ApplicationUser Curso { get; set; }
 
         public float nota_Pr { get; set; }
         public float nota_Ev { get; set; }
@@ -21,8 +25,6 @@ namespace AppGestionEMS.Models
         public float nota_P3 { get; set; }
         public float nota_P4 { get; set; }
         public float nota_Final { get; set; }
-        public float practica_Convalidada { get; set; }
-        public float examen_Convalidado { get; set; }
 
     }
 }
