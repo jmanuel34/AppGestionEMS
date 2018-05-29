@@ -188,6 +188,10 @@
     <Compile Include="Migrations\201805221652266_CreateGrupoClases.Designer.cs">
       <DependentUpon>201805221652266_CreateGrupoClases.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201805292130251_UpdateGrupoClaseProfesor.cs" />
+    <Compile Include="Migrations\201805292130251_UpdateGrupoClaseProfesor.Designer.cs">
+      <DependentUpon>201805292130251_UpdateGrupoClaseProfesor.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\AsignacionDocente.cs" />
@@ -289,6 +293,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201805221652266_CreateGrupoClases.resx">
       <DependentUpon>201805221652266_CreateGrupoClases.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805292130251_UpdateGrupoClaseProfesor.resx">
+      <DependentUpon>201805292130251_UpdateGrupoClaseProfesor.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
