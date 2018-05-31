@@ -30,6 +30,11 @@ namespace AppGestionEMS.Migrations
             AddUser(context, "pablich", "gomez", "pablich@alumnos.upm.es", roleTipoUsuario3);
             AddUser(context, "javier", "garcia", "javier@alumnos.upm.es", roleTipoUsuario3);
             AddUser(context, "jose", "mendez", "jose@alumnos.upm.es", roleTipoUsuario3);
+            AddUser(context, "jose", "mendez", "jose@upm.es", roleTipoUsuario2);
+            AddUser(context, "ficitio1", " apellidos", "ficticio1@alumnos.upm.es", roleTipoUsuario3);
+            AddUser(context, "ficitio2", "apellidos", "ficticio2@alumnos.upm.es", roleTipoUsuario3);
+            AddUser(context, "ficitio3", "apellidos", "ficticio3@alumnos.upm.es", roleTipoUsuario3);
+
 
         }
 

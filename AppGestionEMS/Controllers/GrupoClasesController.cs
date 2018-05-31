@@ -10,17 +10,20 @@ using AppGestionEMS.Models;
 
 namespace AppGestionEMS.Controllers
 {
+    [Authorize(Roles = "administrador")]
     public class GrupoClasesController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: GrupoClases
+      
         public ActionResult Index()
         {
             return View(db.GrupoClases.ToList());
         }
 
         // GET: GrupoClases/Details/5
+      
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -46,6 +49,7 @@ namespace AppGestionEMS.Controllers
         // más información vea http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+       
         public ActionResult Create([Bind(Include = "Id,nombre,cupo")] GrupoClases grupoClases)
         {
             if (ModelState.IsValid)

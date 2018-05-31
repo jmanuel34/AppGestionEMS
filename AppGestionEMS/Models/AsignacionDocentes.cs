@@ -8,7 +8,7 @@ namespace AppGestionEMS.Models
 {
     public class AsignacionDocentes
     {
-
+       
         public int Id { get; set; }
 
         [Display (Name ="Usuario")]

@@ -7,21 +7,36 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using AppGestionEMS.Models;
+using Microsoft.AspNet.Identity;
 
 namespace AppGestionEMS.Controllers
 {
+  
     public class MatriculasController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
 
-        // GET: Matriculas
+
+        [Authorize(Roles = "profesor, alumno")]
         public ActionResult Index()
         {
-            var matriculas = db.Matriculas.Include(m => m.User);
+            int grupo = getGrupoClase();
+            var matriculas = db.Matriculas.Include(m => m.Curso).Include(m => m.GrupoClase).Include(m => m.User).Where(p => p.Id ==
+            grupo).ToList();
             return View(matriculas.ToList());
         }
 
+        private int getGrupoClase()
+        {
+            string currentUserId = User.Identity.GetUserId();
+            var grupos = db.AsignacionDocentes.Where(p => p.UserId == currentUserId).ToList();
+            if (grupos.Count == 0)
+                return -1;
+            else return grupos.First().GrupoClase.Id;
+        }
+
         // GET: Matriculas/Details/5
+        [Authorize(Roles = "profesor, alumno")]
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -37,6 +52,7 @@ namespace AppGestionEMS.Controllers
         }
 
         // GET: Matriculas/Create
+        [Authorize(Roles = "profesor")]
         public ActionResult Create()
         {
             ViewBag.UserId = new SelectList(db.Users, "Id", "Name");
@@ -48,6 +64,7 @@ namespace AppGestionEMS.Controllers
         // más información vea http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "profesor")]
         public ActionResult Create([Bind(Include = "Id,UserId,GrupoClaseId,CursoId")] Matriculas matriculas)
         {
             if (ModelState.IsValid)
@@ -62,6 +79,7 @@ namespace AppGestionEMS.Controllers
         }
 
         // GET: Matriculas/Edit/5
+        [Authorize(Roles = "profesor")]
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -82,6 +100,7 @@ namespace AppGestionEMS.Controllers
         // más información vea http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "profesor")]
         public ActionResult Edit([Bind(Include = "Id,UserId,GrupoClaseId,CursoId")] Matriculas matriculas)
         {
             if (ModelState.IsValid)
@@ -95,6 +114,7 @@ namespace AppGestionEMS.Controllers
         }
 
         // GET: Matriculas/Delete/5
+        [Authorize(Roles = "profesor")]
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -110,6 +130,7 @@ namespace AppGestionEMS.Controllers
         }
 
         // POST: Matriculas/Delete/5
+        [Authorize(Roles = "profesor")]
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
