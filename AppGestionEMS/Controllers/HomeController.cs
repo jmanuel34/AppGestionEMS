@@ -15,7 +15,7 @@ namespace AppGestionEMS.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
+            ViewBag.Message = "Aplicación de Gestión de Asignaturas y Grupos de Clase de la ETSISI.";
 
             return View();
         }
